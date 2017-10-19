@@ -27,10 +27,7 @@ def filter_words(words, skip_words):
     ['go', 'passage', 'south']
 
     """
-    for word in words:
-        for skip in skip_words:
-            if word == skip:
-                words.remove(word);
+    words = list(filter((lambda word: word not in skip_words),words ))
     return words
     
 def remove_punct(text):
